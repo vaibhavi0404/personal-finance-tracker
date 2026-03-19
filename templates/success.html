@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Success</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f1f3f4;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .card {
+            background: white;
+            width: 320px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .tick {
+            font-size: 70px;
+            color: green;
+            animation: pop 0.4s ease;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+
+        .amount {
+            font-size: 26px;
+            margin: 15px 0;
+            font-weight: bold;
+            color: #0b57d0;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #0b57d0;
+            color: white;
+            border: none;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="tick">✔️</div>
+    <h2>Payment Successful</h2>
+
+    <div class="amount">₹ {{ amount }}</div>
+    <p>Sent to {{ to_user }}</p>
+
+    <a href="/">
+        <button class="btn">Back to Home</button>
+    </a>
+</div>
+
+</body>
+</html>
